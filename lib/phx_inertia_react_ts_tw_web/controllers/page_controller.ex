@@ -9,13 +9,13 @@ defmodule PhxInertiaReactTsTwWeb.PageController do
 
   def counter(conn, _params) do
     conn
-    |> assign_prop(:title, "A simple svelte counter")
+    |> assign_prop(:title, "A simple react counter")
     |> render_inertia("Counter")
   end
 
   def todos(conn, _params) do
     conn
-    |> assign_prop(:title, "A simple svelte todo app")
+    |> assign_prop(:title, "A simple react todo app")
     |> render_inertia("Todos")
   end
 end

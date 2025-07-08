@@ -2,7 +2,7 @@ import { useCallback, useMemo, useState } from "react";
 
 function Todos(props) {
   const [todos, setTodos] = useState([
-    { text: "Complete svelte tutorial", complete: true },
+    { text: "Complete react tutorial", complete: true },
     { text: "Build todo app", complete: true },
     { text: "Read TypeScript documentation", complete: false },
     { text: "Write unit tests", complete: false },
@@ -74,7 +74,7 @@ function Todos(props) {
           ) : (
             <ul>
               {todos.map((todo, index) => (
-                <li className="flex items-center justify-between bg-gray-50 p-3 rounded-lg mb-2 shadow-sm">
+                <li key={index} className="flex items-center justify-between bg-gray-50 p-3 rounded-lg mb-2 shadow-sm">
                   <input
                     type="checkbox"
                     checked={todo.complete}
@@ -109,4 +109,3 @@ function Todos(props) {
 }
 
 export default Todos;
-
