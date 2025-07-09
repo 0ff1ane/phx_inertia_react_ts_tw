@@ -387,9 +387,9 @@ __NOTE__: Every stage from the second onwards has a PR associated with it. The s
       createInertiaApp({
         resolve: (name) => {
           const page = await import(`./pages/${name}.tsx`);
-          page.default.layout = NO_LAYOUT_ROUTES.includes(name)
-            ? undefined
-            : (page) => <Layout children={page} />;
+    +     page.default.layout = NO_LAYOUT_ROUTES.includes(name)
+    +       ? undefined
+    +       : (page) => <Layout children={page} />;
           return page;
         },
         setup({ el, App, props }) {
